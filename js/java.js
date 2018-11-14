@@ -30,6 +30,7 @@ an alert message displays when the submit button is clicked communicating which 
     var emailField = document.getElementById('email');
     var phoneField = document.getElementById('phone');
     var commentField = document.getElementById('comments');
+    var quantityField = document.getElementById('order-quantity');
       if (nameField.value === "") {
           alert("Please provide your name.");
           return false;
@@ -39,8 +40,14 @@ an alert message displays when the submit button is clicked communicating which 
         } else if (phoneField.value === "") {
             alert("Please provide your phone number.");
             return false;
+        } else if (shipping.value === "") {
+            alert('Please select whether you need shipping.');
+            return false;
+        } else if (quantityField.value === "" || quantityField.value < 12) {
+            alert('Please enter a quantity for your order. The minimum order is 12.');
+            return false;
         } else if (commentField.value === ""){
-            alert("Please enter information for your order");
+            alert("Please enter design information for your order");
             return false;
         } else {
             alert("Thank you for your order, " + nameField.value + "!");
