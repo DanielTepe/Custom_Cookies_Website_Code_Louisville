@@ -1,0 +1,345 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: arial;
+}
+
+
+/* nav bar list that sets items on the right side of the navigation bar  */
+.home-nav {
+  width: 100%;
+  background-color: DarkSalmon;
+  padding: 5px;
+  min-height: 75px;
+  display: flex;
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  align-items: center;
+}
+
+.home-nav a {
+  color: white;
+}
+
+.home-nav a:hover {
+  color: blue;
+}
+
+.nav {
+  margin: 0 auto;
+  margin-right: 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  list-style: none;
+}
+
+.nav li {
+  font-size: 1.4em;
+  padding: 10px;
+  color: white;
+}
+/*  /nav bar */
+
+
+/* Home page background image with gradient effect that transitions from image to content sections below it */
+.header {
+  height: 600px;
+  background: linear-gradient(0deg, #fff, transparent 80%),
+              url('../images/babyshowers/baby.jpg') no-repeat center;
+  background-size: cover;
+  margin-top: 30px;
+}
+
+/*  /background image */
+
+/* Main home page header */
+h1 {
+  margin: 0;
+  padding: 0;
+  color: white;
+  font-weight: normal;
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: bold;
+  font-style: italic;
+  position: absolute;
+  z-index: 1;
+  text-shadow: 2px 2px 8px black;
+  letter-spacing: 3px;
+}
+/*  /home page header */
+
+.hr-home {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+
+h3 {
+  color: DarkSalmon;
+  margin-top: 10px;
+
+}
+
+
+
+/*  Form  */
+
+.right {
+  text-align: right;
+
+}
+
+.center {
+  text-align: center;
+}
+
+/*  /Form  */
+
+
+/*  Flexbox for designs html page. Breaks down page layout into rows and columns */
+.first-row,
+.second-row,
+.third-row {
+  display: flex;
+  justify-content: space-around;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.misc-first-row,
+.misc-second-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.first-header,
+.designs-header {
+  text-align:center;
+  color: DarkSalmon;
+  font-style: italic;
+  font-weight: bold;
+  letter-spacing: 3px;
+}
+
+.designs-feature img {
+  border-radius: 25px;
+  border: 2px solid DarkSalmon;
+}
+
+.designs img {
+  border-radius: 25px;
+  border: 2px solid DarkSalmon;
+}
+
+.misc img {
+  border-radius: 25px;
+  border: 2px solid DarkSalmon;
+}
+
+hr {
+    display: block;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: inset;
+    border-width: 2px;
+    color: LightGray;
+    width: 75%;
+    align-items: center;
+}
+/*  /Flexbox for designs html page  */
+
+
+/*  Media Queries  */
+
+@media (min-width: 319px) {
+
+  h1 {
+    font-size: 3.5rem;
+    left: 20px;
+    top: 120px;
+  }
+
+  h3 {
+    text-align: center
+  }
+
+/* changes image sizes and layout for small screens */
+  .first-row,
+  .second-row,
+  .third-row {
+    flex-wrap: wrap;
+    padding-bottom: 40px;
+}
+
+  .misc-first-row {
+    margin-bottom: 20px;
+    margin-top: 20px;
+  }
+
+  .second-col {
+    padding-bottom: 20px;
+    padding-top: 20px;
+    order: -1;
+  }
+
+  .designs img,
+  .misc img {
+    height: 125px;
+    width: 125px;
+  }
+
+  .designs-feature img {
+    height: 275px;
+    width: 275px;
+  }
+
+  .first-header {
+    margin-top: 75px;
+  }
+
+  .designs-header,
+  .first-header {
+    font-size: 1.5em;
+    padding-top: 20px;
+}
+
+
+@media (min-width: 576px) {
+
+  h1 {
+    font-size: 5rem;
+    left: 30px;
+    top: 150px;
+  }
+}
+
+
+@media (min-width: 768px) {
+
+/* changes image sizes and layout for medium screens */
+  .first-row,
+  .second-row,
+  .third-row {
+    align-items: center;
+    padding-bottom: 30px;
+  }
+
+  .first-row {
+    padding-top: 10px;
+  }
+
+  .first-col,
+  .second-col {
+    padding-bottom: 0px;
+  }
+
+  .second-col {
+    order: 0;
+  }
+
+  .misc {
+    margin-top: 10px;
+  }
+
+  .designs img {
+    height: 175px;
+    width: 175px;
+  }
+
+  .designs-feature img {
+    height: 300px;
+    width: 300px;
+  }
+
+  .misc img {
+    height: 250px;
+    width: 250px;
+  }
+
+  .designs-header,
+  .first-header {
+    font-size: 3em;
+  }
+
+  .first-header {
+    margin-top: 75px;
+  }
+
+  .designs-header {
+    padding-top: 20px;
+  }
+
+/* image hover: enlarges smaller images when mouse hovers over them */
+  .thumbnail:hover {
+      position:relative;
+      top: 0px;
+      left: 0px;
+      width:225px;
+      height:225px;
+      display:inline-block;
+      z-index:9;
+  }
+/* /image hover */
+
+}
+
+@media (min-width: 992px) {
+
+  h1 {
+    top: 150px;
+    left: 100px;
+    font-size: 6rem; 
+  }
+
+/* changes image sizes and layout for large screens */
+  .first-row,
+  .second-row,
+  .third-row {
+    padding-bottom: 50px;
+  }
+
+  .first-header,
+  .designs-header {
+    padding: 30px;
+    font-size: 3.5em;
+  }
+
+  .first-header {
+    margin-top: 90px;
+  }
+
+  .designs-header {
+    padding: 30px;
+  }
+
+  .designs img {
+    height: 200px;
+    width: 200px;
+  }
+
+  .designs-feature img {
+    height: 425px;
+    width: 425px;
+  }
+
+  .misc img {
+    height: 300px;
+    width: 300px;
+  }
+
+  .thumbnail:hover {
+      width:300px;
+      height:300px;
+  }
+
+}
+/*  /Media Queries  */
